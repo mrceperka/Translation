@@ -96,7 +96,7 @@ class Translator extends \Symfony\Component\Translation\Translator implements \K
 		$this->fallbackResolver = $fallbackResolver;
 		$this->translationsLoader = $loader;
 
-		parent::__construct('', $formatter);
+		parent::__construct('cs', $formatter);
 	}
 
 	/**
