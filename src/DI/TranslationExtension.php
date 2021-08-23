@@ -316,8 +316,6 @@ class TranslationExtension extends \Nette\DI\CompilerExtension
 
 			/** @var \Nette\DI\Definitions\ServiceDefinition $applicationServiceDefinition */
 			$applicationServiceDefinition = $builder->getDefinition($applicationService);
-			$applicationServiceDefinition
-				->addSetup('$service->onRequest[] = ?', [[$this->prefix('@userLocaleResolver.param'), 'onRequest']]);
 
 			if ($config['debugger'] && interface_exists(IBarPanel::class)) {
 				$applicationServiceDefinition
